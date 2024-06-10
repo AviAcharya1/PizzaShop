@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Shop</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <h1>Pizza Shop</h1>
+        <nav>
+            <ul>
+                <li><a href="#pizzas">Pizzas</a></li>
+                <li><a href="#sides">Sides</a></li>
+                <li><a href="#desserts">Desserts</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="menu">
+            <h2>Menu</h2>
+            <div id="categories">
+                <button onclick="filterMenu('all')">All</button>
+                <button onclick="filterMenu('pizzas')">Pizzas</button>
+                <button onclick="filterMenu('sides')">Sides</button>
+                <button onclick="filterMenu('desserts')">Desserts</button>
+            </div>
+            <div id="menu-items">
+                <!-- Menu items will be injected here by JavaScript -->
+            </div>
+        </section>
+        
+        <section id="customize">
+            <h2>Customize Your Pizza</h2>
+            <form id="customize-form">
+                <label for="toppings">Toppings:</label>
+                <select id="toppings" multiple>
+                    <option value="pepperoni">Pepperoni</option>
+                    <option value="mushrooms">Mushrooms</option>
+                    <option value="onions">Onions</option>
+                    <option value="sausage">Sausage</option>
+                    <option value="bacon">Bacon</option>
+                    <option value="extraCheese">Extra Cheese</option>
+                    <option value="blackOlives">Black Olives</option>
+                    <option value="greenPeppers">Green Peppers</option>
+                    <option value="pineapple">Pineapple</option>
+                    <option value="spinach">Spinach</option>
+                </select>
+
+                <label for="sauces">Sauces:</label>
+                <select id="sauces">
+                    <option value="tomato">Tomato</option>
+                    <option value="alfredo">Alfredo</option>
+                    <option value="pesto">Pesto</option>
+                </select>
+
+                <label for="crusts">Crusts:</label>
+                <select id="crusts">
+                    <option value="thin">Thin</option>
+                    <option value="regular">Regular</option>
+                    <option value="stuffed">Stuffed</option>
+                </select>
+
+                <button type="submit">Add to Order</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Pizza Shop. All rights reserved.</p>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>
